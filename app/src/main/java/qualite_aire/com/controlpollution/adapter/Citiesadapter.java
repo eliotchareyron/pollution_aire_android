@@ -17,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.orm.SugarContext;
+
+
 import qualite_aire.com.controlpollution.R;
 import qualite_aire.com.controlpollution.model.City;
 import qualite_aire.com.controlpollution.model.Cityfav;
