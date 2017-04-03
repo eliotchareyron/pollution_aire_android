@@ -60,7 +60,6 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
                     Cityfav.delete(fav.get(0));
 
 
-
                     activity.finish();
                 }
             });
