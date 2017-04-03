@@ -54,7 +54,7 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
                 @Override
                 public void onClick(View v) {
                     SugarContext.init(v.getContext());
-                    Toast.makeText(v.getContext(), "supprimer des favoris", Toast.LENGTH_LONG).show();
+                    Toast.makeText(v.getContext(), "supprimé des favoris", Toast.LENGTH_LONG).show();
 
                     List<Cityfav> fav = Cityfav.find(Cityfav.class,"idapi = ?", id.getText().toString());
                     Cityfav.delete(fav.get(0));
