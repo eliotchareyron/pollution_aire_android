@@ -4,7 +4,9 @@ package qualite_aire.com.controlpollution.adapter;
  * Created by etudiant on 01/04/2017.
  */
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -23,6 +25,7 @@ import com.orm.query.Select;
 
 import qualite_aire.com.controlpollution.R;
 import qualite_aire.com.controlpollution.activity.FavActivity;
+import qualite_aire.com.controlpollution.activity.MainActivity;
 import qualite_aire.com.controlpollution.model.City;
 import qualite_aire.com.controlpollution.model.Cityfav;
 import qualite_aire.com.controlpollution.model.favories_city;
@@ -34,7 +37,7 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
 
     private List<favories_city> cities;
     private int rowLayout;
-    private Context context;
+    private Activity act;
 
     public static class CityViewHolder extends RecyclerView.ViewHolder {
         LinearLayout CityLayout;
@@ -44,7 +47,7 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
         TextView id;
         ImageButton bouton;
 
-        public CityViewHolder(View v) {
+        public CityViewHolder(View v, final Activity activity) {
             super(v);
             CityLayout = (LinearLayout) v.findViewById(R.id.favoris_layout);
             cityname = (TextView) v.findViewById(R.id.title_favories);
@@ -67,23 +70,24 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
                     Cityfav.delete(fav.get(0));
 
                     Log.d("supprimmer" ,Cityfav.listAll(Cityfav.class).toString());
-                   
+
+                    activity.finish();
                 }
             });
 
         }
         }
-    public favoriesadapter(List<favories_city> city, int rowLayout, Context context) {
+    public favoriesadapter(List<favories_city> city, int rowLayout, Activity act) {
         this.cities = city;
         this.rowLayout = rowLayout;
-        this.context = context;
+        this.act = act;
     }
 
     @Override
     public favoriesadapter.CityViewHolder onCreateViewHolder(ViewGroup parent,
                                                            int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new favoriesadapter.CityViewHolder(view);
+        return new favoriesadapter.CityViewHolder(view, act);
     }
 
         @Override

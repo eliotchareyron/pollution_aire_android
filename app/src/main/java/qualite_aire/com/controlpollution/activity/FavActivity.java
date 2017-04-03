@@ -41,7 +41,7 @@ public class FavActivity extends Activity{
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.citiesfav_recycler_view);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        final favoriesadapter favAdapt = new favoriesadapter(cities, R.layout.liste_favories, getApplicationContext());
+        final favoriesadapter favAdapt = new favoriesadapter(cities, R.layout.liste_favories, this);
         recyclerView.setAdapter(favAdapt);
 
         if (API_KEY.isEmpty()) {
@@ -83,5 +83,7 @@ public class FavActivity extends Activity{
                 }
             });
         }
+
+
     }
 }

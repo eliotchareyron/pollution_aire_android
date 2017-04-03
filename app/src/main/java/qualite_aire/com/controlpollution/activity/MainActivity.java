@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.favoris:
 
-                Intent intent = new Intent(MainActivity.this, FavActivity.class);  //Lancer l'activité DisplayVue
+                Intent intent = new Intent(MainActivity.this, FavActivity.class);  //Lancer l'activité Fav
                 startActivity(intent);
                 return true;
 
