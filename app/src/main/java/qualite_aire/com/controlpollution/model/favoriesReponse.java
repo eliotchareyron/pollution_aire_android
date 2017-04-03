@@ -10,14 +10,14 @@ import java.util.List;
 
 public class favoriesReponse {
     @SerializedName("data")
-    private List <City> data;
+    private List <favories_city> data;
 
 
-    public List<City> getData() {
+    public List<favories_city> getData() {
         return data;
     }
 
-    public void setData(List<City> data) {
+    public void setData(List<favories_city> data) {
         this.data = data;
     }
 }

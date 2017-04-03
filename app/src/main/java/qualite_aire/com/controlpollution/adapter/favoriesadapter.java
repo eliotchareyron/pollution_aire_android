@@ -17,13 +17,14 @@ import android.widget.Toast;
 
 import com.orm.SugarContext;
 import qualite_aire.com.controlpollution.R;
-import qualite_aire.com.controlpollution.model.City;
+import qualite_aire.com.controlpollution.model.favories_city;
 
 import java.io.IOError;
 import java.util.List;
 
 public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityViewHolder> {
-    private List<City> favoris;
+
+    private List<favories_city> cities;
     private int rowLayout;
     private Context context;
 
@@ -55,8 +56,8 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
 
         }
         }
-    public favoriesadapter(List<City> city, int rowLayout, Context context) {
-        this.favoris = city;
+    public favoriesadapter(List<favories_city> city, int rowLayout, Context context) {
+        this.cities = city;
         this.rowLayout = rowLayout;
         this.context = context;
     }
@@ -70,7 +71,10 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
 
         @Override
     public void onBindViewHolder(favoriesadapter.CityViewHolder holder, final int position) throws IOError {
-        holder.cityname.setText(favoris.get(position).getName());
+            holder.cityname.setText(cities.get(position).getName());
+            holder.time.setText(cities.get(position).getTime());
+            holder.aqi.setText(cities.get(position).getAqi());
+            holder.id.setText(cities.get(position).getId());
 
         int pollution;
 
@@ -99,7 +103,7 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
 
     @Override
     public int getItemCount() {
-        return favoris.size();
+        return cities.size();
     }
 
 }

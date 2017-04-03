@@ -1,6 +1,6 @@
 package qualite_aire.com.controlpollution.activity;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,13 +14,11 @@ import android.view.MenuItem;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.orm.SugarContext;
 import qualite_aire.com.controlpollution.R;
-import qualite_aire.com.controlpollution.activity.FavActivity;
+
 import qualite_aire.com.controlpollution.adapter.Citiesadapter;
 import qualite_aire.com.controlpollution.model.City;
 import qualite_aire.com.controlpollution.model.CityReponse;
-import qualite_aire.com.controlpollution.model.Cityfav;
 import qualite_aire.com.controlpollution.rest.ApiClient;
 import qualite_aire.com.controlpollution.rest.ApiInterface;
 
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<CityReponse> call, Response<CityReponse> response) {
                         int statusCode = response.code();
                         List <City> cities = response.body().getData();
-
 
                         recyclerView.setAdapter(new Citiesadapter(cities, R.layout.list_item_city, getApplicationContext()));
 
