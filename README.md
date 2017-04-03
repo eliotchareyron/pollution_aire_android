@@ -1,6 +1,6 @@
 # pollution_aire_android
 
-ce dépôt GitHub contient une application Android qui permet d'avoir l'indice de pollution d'une ville.
+Ce dépôt GitHub contient une application Android qui permet d'avoir l'indice de pollution d'une ville.
 Elle permet aussi de rechercher des villes et afficher l'indice de pollution de ces villes.
 
 
