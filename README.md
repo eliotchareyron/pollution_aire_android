@@ -32,6 +32,20 @@ Cette Api nous fournis un Json comme par exemple celui ci-dessous :
  J'utilise l'Orm Sugar disponile a cette adresse : <a href="https://github.com/satyan/sugar/blob/master/README.md"> lien ORM Sugar </a>
  L'Orm Sugar permet de créer une base de donnée afin d'y stocker les favoris sélectionné par l'utilisateur.
  
+ 
+ # changelog
+## 03-04-2017 Version 2.0.0  
+==========================
+* 03-04-2017 ajout image
+* 03-04-2017 ajout fonction créeation favoris
+* 03-04-2017 fix bug liste favoris
+* 03-04-2017 ajout nouvelle view favoris
+* 03-04-2017 ajout fonction créeation favoris
+
+## 02-04-2017 Version 1.0  
+==========================
+* 02-04-2017 ajout recherche ville
+* 02-04-2017 initial commit 
     
 
 ## Author
