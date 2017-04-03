@@ -5,8 +5,7 @@ package qualite_aire.com.controlpollution.adapter;
  */
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -19,14 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.orm.SugarContext;
-import com.orm.SugarRecord;
-import com.orm.query.Condition;
-import com.orm.query.Select;
+
 
 import qualite_aire.com.controlpollution.R;
-import qualite_aire.com.controlpollution.activity.FavActivity;
-import qualite_aire.com.controlpollution.activity.MainActivity;
-import qualite_aire.com.controlpollution.model.City;
 import qualite_aire.com.controlpollution.model.Cityfav;
 import qualite_aire.com.controlpollution.model.favories_city;
 
