@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/movies_layout"
+    android:id="@+id/favoris_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
@@ -16,7 +16,7 @@
 
 
     <LinearLayout
-        android:id="@+id/pollution"
+        android:id="@+id/favoris_pollution"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
@@ -28,7 +28,7 @@
         android:layout_weight="0.01">
 
         <TextView
-            android:id="@+id/subtitle"
+            android:id="@+id/subtitle_favories"
             android:layout_width="60dp"
             android:layout_height="108dp"
             android:layout_gravity="center"
@@ -40,15 +40,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:id="@+id/favories_info"
+        android:layout_height="123dp"
         android:layout_marginLeft="5dp"
         android:orientation="vertical"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.97"
+        android:weightSum="1">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/title_favories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
@@ -60,7 +63,7 @@
 
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/description_favories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="3"
@@ -68,20 +71,19 @@
             tools:ignore="RtlHardcoded,RtlSymmetry" />
 
         <ImageButton
-            android:layout_width="69dp"
-            android:layout_height="71dp"
-            app:srcCompat="@android:drawable/btn_star_big_off"
-            android:id="@+id/fav"
-            />
+            android:layout_width="72dp"
+            android:layout_height="0dp"
+            app:srcCompat="@android:drawable/ic_grade_white"
+            android:id="@+id/fav2"
+            android:contentDescription="" />
 
         <TextView
             android:visibility="invisible"
             android:layout_width="69dp"
             android:layout_height="wrap_content"
-            android:id="@+id/id_city" />
+            android:id="@+id/id_city_favories" />
 
     </LinearLayout>
 
 
 </LinearLayout>
-

@@ -38,12 +38,12 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
 
         public CityViewHolder(View v) {
             super(v);
-            CityLayout = (LinearLayout) v.findViewById(R.id.movies_layout);
-            cityname = (TextView) v.findViewById(R.id.title);
-            aqi = (TextView) v.findViewById(R.id.subtitle);
-            time = (TextView) v.findViewById(R.id.description);
-            bouton= (ImageButton) v.findViewById(R.id.fav);
-            id = (TextView) v.findViewById(R.id.id_city);
+            CityLayout = (LinearLayout) v.findViewById(R.id.favoris_layout);
+            cityname = (TextView) v.findViewById(R.id.title_favories);
+            aqi = (TextView) v.findViewById(R.id.subtitle_favories);
+            time = (TextView) v.findViewById(R.id.description_favories);
+            bouton= (ImageButton) v.findViewById(R.id.fav2);
+            id = (TextView) v.findViewById(R.id.id_city_favories);
 
             bouton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -91,12 +91,12 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
 
 
         if (pollution < 50 ) {
-            holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.GREEN);
+            holder.itemView.findViewById(R.id.favoris_pollution).setBackgroundColor(Color.GREEN);
         } else if ( pollution >= 50 && pollution < 100) {
-            holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.rgb(255,140,0));
+            holder.itemView.findViewById(R.id.favoris_pollution).setBackgroundColor(Color.rgb(255,140,0));
 
         } else {
-            holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.RED);
+            holder.itemView.findViewById(R.id.favoris_pollution).setBackgroundColor(Color.RED);
         }
 
     }

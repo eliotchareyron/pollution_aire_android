@@ -16,6 +16,7 @@ public class favoriesReponse {
     public List<favories_city> getData() {
         return data;
     }
+    public  favories_city getlastdata() {return data.get(data.size()-1);}
 
     public void setData(List<favories_city> data) {
         this.data = data;
