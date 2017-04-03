@@ -33,3 +33,6 @@ Cette Api nous fournis un Json comme par exemple celui ci-dessous :
  L'Orm Sugar permet de créer une base de donnée afin d'y stocker les favoris sélectionné par l'utilisateur.
  
     
+
+## Author
+- [Eliot Chareyron] (https://github.com/eliotchareyron)
