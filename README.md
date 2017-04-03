@@ -5,10 +5,10 @@ Elle permet aussi de rechercher des villes et afficher l'indice de pollution de 
 
 
 # Ressources 
-Pour avoir l'indice de pollution et le nom des villes nous utilisons l'api de AQI disponnible a l'adresse suivante : http://aqicn.org/json-api/doc/#api-_
+Pour avoir l'indice de pollution et le nom des villes nous utilisons l'api de AQI disponnible a l'adresse suivante :
+<a href="http://aqicn.org/json-api/doc/#api-_"> lien  API AQI </a> 
 Cette Api nous fournis un Json comme par exemple celui ci-dessous : 
-<pre>
-<code>
+``` json
 {
   "uid": 3028,
   "aqi": "30",
@@ -26,11 +26,10 @@ Cette Api nous fournis un Json comme par exemple celui ci-dessous :
             "url": "france/rhonealpes/rhone/lyon-centre"
          }
 }
- </code>   
- </pre>
+```
  
  
- J'utilise l'Orm Sugar disponile a cette adresse : https://github.com/satyan/sugar/blob/master/README.md
+ J'utilise l'Orm Sugar disponile a cette adresse : <a href="https://github.com/satyan/sugar/blob/master/README.md"> lien ORM Sugar </a>
  L'Orm Sugar permet de créer une base de donnée afin d'y stocker les favoris sélectionné par l'utilisateur.
  
     
