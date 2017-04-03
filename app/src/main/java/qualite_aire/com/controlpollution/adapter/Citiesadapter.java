@@ -6,6 +6,7 @@ package qualite_aire.com.controlpollution.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -110,11 +111,13 @@ public class Citiesadapter extends RecyclerView.Adapter<Citiesadapter.CityViewHo
 
         if (pollution < 50 ) {
             holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.GREEN);
+            holder.itemView.findViewById(R.id.imageView).setBackgroundResource(R.mipmap.img3);
         } else if ( pollution >= 50 && pollution < 100) {
             holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.rgb(255,140,0));
-
+            holder.itemView.findViewById(R.id.imageView).setBackgroundResource(R.mipmap.img2);
         } else {
             holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.RED);
+            holder.itemView.findViewById(R.id.imageView).setBackgroundResource(R.mipmap.img1);
         }
 
     }
