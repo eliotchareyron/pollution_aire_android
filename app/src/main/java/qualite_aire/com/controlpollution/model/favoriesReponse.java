@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by etudiant on 02/04/2017.
  */
-
+//recuperation de tous les donnees reçus pas l'api
 public class favoriesReponse {
     @SerializedName("data")
     private List <favories_city> data;

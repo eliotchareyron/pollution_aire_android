@@ -8,7 +8,7 @@ import android.app.Activity;
 
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +26,7 @@ import qualite_aire.com.controlpollution.model.favories_city;
 
 import java.io.IOError;
 import java.util.List;
-
+// adapter de l'activity FacActivity
 public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityViewHolder> {
 
     private List<favories_city> cities;
@@ -55,8 +55,6 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
                 public void onClick(View v) {
                     SugarContext.init(v.getContext());
                     Toast.makeText(v.getContext(), "supprimer des favoris", Toast.LENGTH_LONG).show();
-
-
 
                     List<Cityfav> fav = Cityfav.find(Cityfav.class,"idapi = ?", id.getText().toString());
                     Cityfav.delete(fav.get(0));
@@ -102,7 +100,7 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
             pollution = 0;
         }
 
-
+            // meme boucle que celle de l'adapter Citiesadapter pour set la couleur
         if (pollution < 50 ) {
             holder.itemView.findViewById(R.id.favoris_pollution).setBackgroundColor(Color.GREEN);
         } else if ( pollution >= 50 && pollution < 100) {

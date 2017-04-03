@@ -28,10 +28,11 @@ import static android.content.ContentValues.TAG;
  * Created by etudiant on 01/04/2017.
  */
 
+// activity pour afficher les favories dans leur view
 public class FavActivity extends Activity{
-    // insert your API KEY here
+    // clé pour api
     private final static String API_KEY = "fe74e0b525908d08ff696aabce918b22ff096fee";
-    public String ville = "grenoble";
+    public String ville;
     List<favories_city> cities = new ArrayList<>();
     public void onCreate(Bundle savedInstanceState)
     {
@@ -49,7 +50,7 @@ public class FavActivity extends Activity{
             return;
         }
 
-        // Cityfav table sugar
+        // Cityfav Table sqlLite avec l'ORM Sugar
         List<Cityfav> favories = Cityfav.listAll(Cityfav.class);
 
         long valeur = Cityfav.count(Cityfav.class);

@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+//recuperation de tous les donnees reçus pas l'api
 public class CityReponse {
 
     @SerializedName("data")

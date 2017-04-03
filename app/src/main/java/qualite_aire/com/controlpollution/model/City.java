@@ -6,14 +6,16 @@ package qualite_aire.com.controlpollution.model;
 
 import com.google.gson.annotations.SerializedName;
 
-// objet
+// objet creer en fonction des informations retourner par l'api
 public class City {
 
     @SerializedName("aqi")
     private String  aqi;
     @SerializedName("station")
+    // objet de type Name pour recuperer le nom de la ville
     private Name name;
     @SerializedName("time")
+    // objet de type Time pour recuperer la date du relever pour la ville
     public Time time;
     @SerializedName("uid")
     private String id;

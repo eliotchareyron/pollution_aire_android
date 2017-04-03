@@ -7,7 +7,7 @@ package qualite_aire.com.controlpollution.adapter;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +26,7 @@ import qualite_aire.com.controlpollution.model.Cityfav;
 import java.io.IOError;
 import java.util.List;
 
+// adapter de l'activity MainActivity
 public class Citiesadapter extends RecyclerView.Adapter<Citiesadapter.CityViewHolder> {
 
     private List<City> cities;
@@ -58,7 +59,6 @@ public class Citiesadapter extends RecyclerView.Adapter<Citiesadapter.CityViewHo
                 public void onClick(View v) {
                     SugarContext.init(v.getContext());
                     Toast.makeText(v.getContext(), "ajouter au favoris", Toast.LENGTH_LONG).show();
-
 
                     Cityfav favories = new Cityfav(id.getText().toString(), cityname.getText().toString());
                     favories.save();
@@ -109,12 +109,15 @@ public class Citiesadapter extends RecyclerView.Adapter<Citiesadapter.CityViewHo
 
 
         if (pollution < 50 ) {
+            // set coleur vert  si l'indice de pollution est inferieur a 50 et affichage du smiley happy
             holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.GREEN);
             holder.itemView.findViewById(R.id.imageView).setBackgroundResource(R.mipmap.img3);
         } else if ( pollution >= 50 && pollution < 100) {
+            // set coleur orange  si l'indice de pollution est compris entre 5O et 100 et affichage du smiley face pain
             holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.rgb(255,140,0));
             holder.itemView.findViewById(R.id.imageView).setBackgroundResource(R.mipmap.img2);
         } else {
+            // set coleur rouge si l'indice de pollution est supperieur a 100 et affichage du smiley unhappy
             holder.itemView.findViewById(R.id.pollution).setBackgroundColor(Color.RED);
             holder.itemView.findViewById(R.id.imageView).setBackgroundResource(R.mipmap.img1);
         }

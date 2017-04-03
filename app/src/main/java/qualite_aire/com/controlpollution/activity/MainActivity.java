@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     SearchView searchView;
 
-    // insert your API KEY here
+    // clé api
     private final static String API_KEY = "fe74e0b525908d08ff696aabce918b22ff096fee";
+    // ville afficher par défault
     public String ville = "grenoble";
 
 
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    //Méthode qui se déclenchera lorsque vous appuierez sur le bouton menu du téléphone
+    //Méthode qui se déclenchera lorsque que l'on appuie sur le bouton du menu
     public boolean onCreateOptionsMenu(Menu menu) {
         //Création d'un MenuInflater qui va permettre d'instancier un Menu XML en un objet Menu
         MenuInflater inflater = getMenuInflater();
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.favoris:
 
-                Intent intent = new Intent(MainActivity.this, FavActivity.class);  //Lancer l'activité Fav
+                Intent intent = new Intent(MainActivity.this, FavActivity.class);  //Lancer l'activité FavActivity
                 startActivity(intent);
                 return true;
 

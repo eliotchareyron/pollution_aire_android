@@ -6,6 +6,7 @@ import com.orm.SugarRecord;
  * Created by etudiant on 01/04/2017.
  */
 
+// table sql crer avec l'ORM Sugar
 public class Cityfav extends SugarRecord {
 
     private String idapi;
@@ -17,6 +18,7 @@ public class Cityfav extends SugarRecord {
     public String getid_api() { return  idapi;}
     public void  setid_api(String id) {this.idapi = id;}
 
+        // contructeur obligatoire pour Sugar
     public Cityfav(){
     }
 

@@ -6,6 +6,7 @@ package qualite_aire.com.controlpollution.model;
 
 import com.google.gson.annotations.SerializedName;
 
+// donnees reçus de l'api en fonction des données disponible dans la table Cityfav
 public class favories_city {
 
     @SerializedName("aqi")
