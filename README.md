@@ -6,7 +6,7 @@ Elle permet aussi de rechercher des villes et afficher l'indice de pollution de 
 
 # Ressources 
 Pour avoir l'indice de pollution et le nom des villes nous utilisons l'api de AQI disponnible a l'adresse suivante :
-<a href="http://aqicn.org/json-api/doc/#api-_"> lien  API AQI </a> 
+<a href="http://aqicn.org/json-api/doc/#api-_"> lien  API AQI </a>  </br>
 Cette Api nous fournis un Json comme par exemple celui ci-dessous : 
 ``` json
 {
