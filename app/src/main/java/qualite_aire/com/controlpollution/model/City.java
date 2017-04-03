@@ -6,6 +6,7 @@ package qualite_aire.com.controlpollution.model;
 
 import com.google.gson.annotations.SerializedName;
 
+// objet
 public class City {
 
     @SerializedName("aqi")

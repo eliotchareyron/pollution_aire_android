@@ -58,7 +58,7 @@ public class Citiesadapter extends RecyclerView.Adapter<Citiesadapter.CityViewHo
                 public void onClick(View v) {
                     SugarContext.init(v.getContext());
                     Toast.makeText(v.getContext(), "ajouter au favoris", Toast.LENGTH_LONG).show();
-                    Log.d("test" ,aqi.getText().toString());
+
 
                     Cityfav favories = new Cityfav(id.getText().toString(), cityname.getText().toString());
                     favories.save();

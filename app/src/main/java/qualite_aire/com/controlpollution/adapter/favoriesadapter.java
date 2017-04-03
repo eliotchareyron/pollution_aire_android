@@ -55,15 +55,13 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
                 public void onClick(View v) {
                     SugarContext.init(v.getContext());
                     Toast.makeText(v.getContext(), "supprimer des favoris", Toast.LENGTH_LONG).show();
-                  //// TODO: 03/04/2017 supprimer favories lors du click sur bouton
-                    Log.d("inf",id.getText().toString());
-                    Log.d("all" ,Cityfav.listAll(Cityfav.class).toString());
+
 
 
                     List<Cityfav> fav = Cityfav.find(Cityfav.class,"idapi = ?", id.getText().toString());
                     Cityfav.delete(fav.get(0));
 
-                    Log.d("supprimmer" ,Cityfav.listAll(Cityfav.class).toString());
+
 
                     activity.finish();
                 }

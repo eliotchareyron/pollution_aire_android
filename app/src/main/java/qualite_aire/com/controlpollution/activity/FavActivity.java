@@ -53,14 +53,14 @@ public class FavActivity extends Activity{
         List<Cityfav> favories = Cityfav.listAll(Cityfav.class);
 
         long valeur = Cityfav.count(Cityfav.class);
-        Log.d("nb", String.valueOf(valeur));
+
 
 
         for (int i = 0; i <= valeur-1; i++) {
 
             ville = favories.get(i).getname().toString();
 
-            Log.d("valeur", favories.get(i).toString());
+
             ApiInterface apiService =
                     ApiClient.getClient().create(ApiInterface.class);
 
