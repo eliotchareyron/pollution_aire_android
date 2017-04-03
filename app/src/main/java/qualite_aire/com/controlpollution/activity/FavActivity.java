@@ -55,7 +55,7 @@ public class FavActivity extends Activity{
         long valeur = Cityfav.count(Cityfav.class);
         Log.d("nb", String.valueOf(valeur));
 
-//// TODO: 02/04/2017 ajouter boucle pour lister favories dans la view
+
         for (int i = 0; i <= valeur-1; i++) {
 
             ville = favories.get(i).getname().toString();

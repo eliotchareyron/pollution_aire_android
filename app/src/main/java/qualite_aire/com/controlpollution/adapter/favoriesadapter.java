@@ -7,6 +7,7 @@ package qualite_aire.com.controlpollution.adapter;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.orm.SugarContext;
+import com.orm.SugarRecord;
+import com.orm.query.Condition;
+import com.orm.query.Select;
+
 import qualite_aire.com.controlpollution.R;
+import qualite_aire.com.controlpollution.activity.FavActivity;
+import qualite_aire.com.controlpollution.model.City;
+import qualite_aire.com.controlpollution.model.Cityfav;
 import qualite_aire.com.controlpollution.model.favories_city;
 
 import java.io.IOError;
@@ -50,7 +58,16 @@ public class favoriesadapter extends  RecyclerView.Adapter<favoriesadapter.CityV
                 public void onClick(View v) {
                     SugarContext.init(v.getContext());
                     Toast.makeText(v.getContext(), "supprimer des favoris", Toast.LENGTH_LONG).show();
+                  //// TODO: 03/04/2017 supprimer favories lors du click sur bouton
+                    Log.d("inf",id.getText().toString());
+                    Log.d("all" ,Cityfav.listAll(Cityfav.class).toString());
 
+
+                    List<Cityfav> fav = Cityfav.find(Cityfav.class,"idapi = ?", id.getText().toString());
+                    Cityfav.delete(fav.get(0));
+
+                    Log.d("supprimmer" ,Cityfav.listAll(Cityfav.class).toString());
+                   
                 }
             });
 

@@ -8,27 +8,27 @@ import com.orm.SugarRecord;
 
 public class Cityfav extends SugarRecord {
 
-    private String id_api;
+    private String idapi;
     private  String name;
 
     public  String getname(){ return name;}
     public  void setname(String name) {this.name = name;}
 
-    public String getid_api() { return  id_api;}
-    public void  setid_api(String id) {this.id_api = id;}
+    public String getid_api() { return  idapi;}
+    public void  setid_api(String id) {this.idapi = id;}
 
     public Cityfav(){
     }
 
     public Cityfav(String id_api , String name){
-        this.id_api = id_api;
+        this.idapi = id_api;
         this.name = name;
     }
 
     @Override
     public String toString() {
         return "Cityfav{" +
-                "id_api='" + id_api + '\'' +
+                "idapi='" + idapi + '\'' +
                 ", name='" + name + '\'' +
                 '}';
     }
